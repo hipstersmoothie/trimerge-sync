@@ -7,4 +7,13 @@ describe('JSON_DELTA_CODEC', () => {
     const decoded = JSON_DELTA_CODEC.decode(encoded);
     expect(decoded).toEqual(obj);
   });
+  it('should roundtrip undefined', () => {
+    const obj = undefined;
+    const encoded = JSON_DELTA_CODEC.encode(obj);
+    const decoded = JSON_DELTA_CODEC.decode(encoded);
+    expect(decoded).toBeUndefined();
+  });
+  it('should not decode undefined deltas', () => {
+    expect(() => JSON_DELTA_CODEC.decode(undefined)).toThrow();
+  });
 });
