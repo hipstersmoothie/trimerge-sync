@@ -167,9 +167,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello",
-                  ],
+                  "delta": "[\\"hello\\"]",
                   "metadata": "",
                   "ref": "G0a5Az3Q",
                   "remoteSyncId": "",
@@ -177,10 +175,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "G0a5Az3Q",
-                  "delta": Array [
-                    "hello",
-                    "hello there",
-                  ],
+                  "delta": "[\\"hello\\",\\"hello there\\"]",
                   "metadata": "",
                   "ref": "HwWFgzWO",
                   "remoteSyncId": "",
@@ -266,9 +261,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello",
-                  ],
+                  "delta": "[\\"hello\\"]",
                   "metadata": "",
                   "ref": "G0a5Az3Q",
                   "remoteSyncId": "",
@@ -276,10 +269,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "G0a5Az3Q",
-                  "delta": Array [
-                    "hello",
-                    "hello world",
-                  ],
+                  "delta": "[\\"hello\\",\\"hello world\\"]",
                   "metadata": "",
                   "ref": "VXV5D7z7",
                   "remoteSyncId": "",
@@ -287,10 +277,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "VXV5D7z7",
-                  "delta": Array [
-                    "hello world",
-                    "hello there",
-                  ],
+                  "delta": "[\\"hello world\\",\\"hello there\\"]",
                   "metadata": "",
                   "ref": "YFy1LPs2",
                   "remoteSyncId": "",
@@ -298,10 +285,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "VXV5D7z7",
-                  "delta": Array [
-                    "hello world",
-                    "oh hello",
-                  ],
+                  "delta": "[\\"hello world\\",\\"oh hello\\"]",
                   "metadata": "",
                   "ref": "aG60Gm4o",
                   "remoteSyncId": "",
@@ -377,9 +361,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello",
-                  ],
+                  "delta": "[\\"hello\\"]",
                   "metadata": Object {
                     "clientStore": Object {
                       "commitIndex": 1,
@@ -393,10 +375,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "G0a5Az3Q",
-                  "delta": Array [
-                    "hello",
-                    "hello there",
-                  ],
+                  "delta": "[\\"hello\\",\\"hello there\\"]",
                   "metadata": Object {
                     "clientStore": Object {
                       "commitIndex": 2,
@@ -475,24 +454,10 @@ describe('createIndexedDbBackendFactory', () => {
 
     await expect(dumpDatabase(docId)).resolves.toMatchInlineSnapshot(`
             Object {
-              "commits": Array [
-                Object {
-                  "metadata": Object {
-                    "hello": "there",
-                  },
-                  "ref": "blarg",
-                  "remoteSyncId": "9",
-                  "syncId": 1,
-                },
-              ],
-              "heads": Array [
-                Object {
-                  "ref": "blarg",
-                },
-              ],
+              "commits": Array [],
+              "heads": Array [],
               "remotes": Array [
                 Object {
-                  "lastSyncCursor": "9",
                   "localStoreId": "test-doc-store",
                 },
               ],
@@ -567,9 +532,7 @@ describe('createIndexedDbBackendFactory', () => {
         "commits": Array [
           Object {
             "baseRef": undefined,
-            "delta": Array [
-              "hello remote",
-            ],
+            "delta": "[\\"hello remote\\"]",
             "metadata": "",
             "ref": "F2C9k7m0",
             "remoteSyncId": "foo",
@@ -611,9 +574,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello remote",
-                  ],
+                  "delta": "[\\"hello remote\\"]",
                   "metadata": "",
                   "ref": "F2C9k7m0",
                   "remoteSyncId": "foo",
@@ -639,9 +600,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello remote",
-                  ],
+                  "delta": "[\\"hello remote\\"]",
                   "metadata": "",
                   "ref": "F2C9k7m0",
                   "remoteSyncId": "",
@@ -673,9 +632,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello remote",
-                  ],
+                  "delta": "[\\"hello remote\\"]",
                   "metadata": "",
                   "ref": "F2C9k7m0",
                   "remoteSyncId": "foo",
@@ -724,9 +681,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello offline remote",
-                  ],
+                  "delta": "[\\"hello offline remote\\"]",
                   "metadata": "",
                   "ref": "QBwr4r32",
                   "remoteSyncId": "foo",
@@ -734,10 +689,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "QBwr4r32",
-                  "delta": Array [
-                    "hello offline remote",
-                    "hello online remote",
-                  ],
+                  "delta": "[\\"hello offline remote\\",\\"hello online remote\\"]",
                   "metadata": "",
                   "ref": "YSkdCqy1",
                   "remoteSyncId": "foo",
@@ -801,9 +753,7 @@ describe('createIndexedDbBackendFactory', () => {
       Array [
         Object {
           "baseRef": undefined,
-          "delta": Array [
-            1,
-          ],
+          "delta": "[1]",
           "metadata": "",
           "ref": "N5uy2QOO",
           "remoteSyncId": "",
@@ -811,10 +761,7 @@ describe('createIndexedDbBackendFactory', () => {
         },
         Object {
           "baseRef": "N5uy2QOO",
-          "delta": Array [
-            1,
-            2,
-          ],
+          "delta": "[1,2]",
           "metadata": "",
           "ref": "F55ccS6M",
           "remoteSyncId": "",
@@ -822,10 +769,7 @@ describe('createIndexedDbBackendFactory', () => {
         },
         Object {
           "baseRef": "F55ccS6M",
-          "delta": Array [
-            2,
-            3,
-          ],
+          "delta": "[2,3]",
           "metadata": "",
           "ref": "uBHlRZDM",
           "remoteSyncId": "",
@@ -833,10 +777,7 @@ describe('createIndexedDbBackendFactory', () => {
         },
         Object {
           "baseRef": "uBHlRZDM",
-          "delta": Array [
-            3,
-            4,
-          ],
+          "delta": "[3,4]",
           "metadata": "",
           "ref": "CujSo7BT",
           "remoteSyncId": "",
@@ -844,10 +785,7 @@ describe('createIndexedDbBackendFactory', () => {
         },
         Object {
           "baseRef": "CujSo7BT",
-          "delta": Array [
-            4,
-            5,
-          ],
+          "delta": "[4,5]",
           "metadata": "",
           "ref": "bXqUP_u1",
           "remoteSyncId": "",
@@ -855,10 +793,7 @@ describe('createIndexedDbBackendFactory', () => {
         },
         Object {
           "baseRef": "bXqUP_u1",
-          "delta": Array [
-            5,
-            6,
-          ],
+          "delta": "[5,6]",
           "metadata": "",
           "ref": "5mFFausi",
           "remoteSyncId": "",
@@ -894,10 +829,7 @@ describe('createIndexedDbBackendFactory', () => {
               "commits": Array [
                 Object {
                   "baseRef": "N5uy2QOO",
-                  "delta": Array [
-                    1,
-                    2,
-                  ],
+                  "delta": "[1,2]",
                   "metadata": Object {
                     "newMetadata": Object {
                       "fromRemote": true,
@@ -911,9 +843,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    1,
-                  ],
+                  "delta": "[1]",
                   "metadata": Object {
                     "newMetadata": Object {
                       "fromRemote": true,
@@ -927,10 +857,7 @@ describe('createIndexedDbBackendFactory', () => {
                 },
                 Object {
                   "baseRef": "F55ccS6M",
-                  "delta": Array [
-                    2,
-                    3,
-                  ],
+                  "delta": "[2,3]",
                   "metadata": Object {
                     "newMetadata": Object {
                       "fromRemote": true,
@@ -987,32 +914,33 @@ describe('createIndexedDbBackendFactory', () => {
     await client.shutdown();
 
     await expect(dumpDatabase(docId)).resolves.toMatchInlineSnapshot(`
-Object {
-  "commits": Array [
-    Object {
-      "metadata": Object {
-        "bar": "baz",
-        "foo": "bar",
-        "qux": "quux",
-      },
-      "ref": "blah",
-      "remoteSyncId": "blah2",
-      "syncId": 1,
-    },
-  ],
-  "heads": Array [
-    Object {
-      "ref": "blah",
-    },
-  ],
-  "remotes": Array [
-    Object {
-      "lastSyncCursor": "blah2",
-      "localStoreId": "test-doc-store",
-    },
-  ],
-}
-`);
+            Object {
+              "commits": Array [
+                Object {
+                  "delta": "NOOP",
+                  "metadata": Object {
+                    "bar": "baz",
+                    "foo": "bar",
+                    "qux": "quux",
+                  },
+                  "ref": "blah",
+                  "remoteSyncId": "blah2",
+                  "syncId": 1,
+                },
+              ],
+              "heads": Array [
+                Object {
+                  "ref": "blah",
+                },
+              ],
+              "remotes": Array [
+                Object {
+                  "lastSyncCursor": "blah2",
+                  "localStoreId": "test-doc-store",
+                },
+              ],
+            }
+          `);
   });
 
   it('updates metadata from remote with two users', async () => {
@@ -1059,9 +987,7 @@ Object {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello",
-                  ],
+                  "delta": "[\\"hello\\"]",
                   "metadata": Object {
                     "fromRemote": true,
                     "ref": "G0a5Az3Q",
@@ -1091,9 +1017,7 @@ Object {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello",
-                  ],
+                  "delta": "[\\"hello\\"]",
                   "metadata": Object {
                     "fromRemote": true,
                     "ref": "G0a5Az3Q",
@@ -1161,9 +1085,7 @@ Object {
               "commits": Array [
                 Object {
                   "baseRef": undefined,
-                  "delta": Array [
-                    "hello",
-                  ],
+                  "delta": "[\\"hello\\"]",
                   "metadata": Object {
                     "fromRemote": true,
                     "ref": "G0a5Az3Q",
