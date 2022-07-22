@@ -6,6 +6,7 @@ import {
   SyncStatus,
   TrimergeClient,
   GetLocalStoreFn,
+  JSON_DELTA_CODEC,
 } from 'trimerge-sync';
 import {
   IndexedDbCommitRepository,
@@ -37,6 +38,7 @@ function createIndexedDbBackendFactory(
         localIdGenerator: randomId,
         remoteId: 'localhost',
       }),
+      JSON_DELTA_CODEC,
       (userId, lastSyncId, onEvent) =>
         new WebsocketRemote(
           { userId, readonly: false },
